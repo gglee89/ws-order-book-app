@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Alignment, Navbar, Button } from '@blueprintjs/core';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Navbar className="bp3-dark">
+          <Navbar.Group align={Alignment.LEFT}>
+            <Navbar.Heading>Blueprint</Navbar.Heading>
+            <Navbar.Divider />
+            <Button className="bp3-minimal" icon="home" text="Home" />
+            <Button className="bp3-minimal" icon="document" text="Files" />
+          </Navbar.Group>
+        </Navbar>
       </div>
     );
   }
