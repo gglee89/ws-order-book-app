@@ -44,3 +44,7 @@ v8.10.0
 ## Implementation obstacle(s):
 
 The greatest difficulty was to find possible solutions for a direct connection from the client to third-party websocket services (e.g: BitMEX Websocket). After several attempts, I have decided on implementing a basic ezpress server setup making usage of the `bitmex-realtime-api` module to fetch and feed the data to the client.
+
+## How it should look
+
+![screen shot 2018-08-29 at 4 59 49 pm](https://user-images.githubusercontent.com/16644017/44774019-ffd9f980-abac-11e8-9ab1-da4a29734af6.png)
