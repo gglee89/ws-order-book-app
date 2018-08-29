@@ -1,26 +1,46 @@
-## Table of Contents
+## Order Book Web App
 
-After creation, your project should look like this:
+`Order Book` data renderer
+
+## APIs
+
+- BitMEX: wss://www.bitmex.com/realtime
+
+## Environment
+
+Node (LTS/Carbon)
 
 ```
-my-app/
-  README.md
-  node_modules/
-  package.json
-  public/
-    index.html
-    favicon.ico
-  src/
-    App.css
-    App.js
-    App.test.js
-    index.css
-    index.js
-    logo.svg
+$ node -v
+v8.10.0
 ```
 
-For the project to build, **these files must exist with exact filenames**:
+## Main Modules
 
-* `public/index.html` is the page template;
-* `src/index.js` is the JavaScript entry point.
+- Server:
 
+  - nodejs
+  - express
+  - bitmex-realtime-api
+
+- Client:
+  - react
+  - redux
+  - webpack 3.12
+  - socket.io-client
+  - redux-thunk
+  - sass
+
+## How to start
+
+- Server:
+
+  - `node server.js OR nodemon server.js`
+  - Basic express server setup with the intent to fetch and feed the client with the stream of data originated from third-party libraries (eg.: BitMEX Websocket)
+
+- Client:
+  - `npm run start`
+
+## Implementation obstacle(s):
+
+The greatest difficulty was to find possible solutions for a direct connection from the client to third-party websocket services (e.g: BitMEX Websocket). After several attempts, I have decided on implementing a basic ezpress server setup making usage of the `bitmex-realtime-api` module to fetch and feed the data to the client.

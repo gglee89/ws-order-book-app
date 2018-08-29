@@ -1,0 +1,18 @@
+.white-color {
+    color: #fff;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.table {
+    @at-root #{&}__wrapper {
+        margin-top: 40px;
+    }
+
+    @at-root #{&}__header {
+        font-size: 20px;
+        padding: 0 15px 10px;
+    }
+}
